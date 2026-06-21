@@ -76,7 +76,7 @@ Análise descritiva das bases RAIS 2023 e Censo da Educação Superior 2023.
 
 ---
 
-### `tcc_modelagem_genero_tecnologia_ENEM_SISU.ipynb` — Eixo TCC
+### `TCC_modelagem_genero_tecnologia_ENEM_SISU.ipynb` — Eixo TCC
 
 Modelagem preditiva supervisionada sobre microdados do ENEM (2018–2023) e SISU (2023).
 
@@ -109,24 +109,62 @@ Modelagem preditiva supervisionada sobre microdados do ENEM (2018–2023) e SISU
 
 ---
 
-## Entregável — Modelo preditivo de escolha de curso
-
-O Capítulo 8 do TCC apresenta uma ferramenta de apoio à decisão para escolas, construída a partir do Modelo 3. A ferramenta permite que escolas públicas identifiquem turmas com baixo perfil previsto para tecnologia e promovam ações direcionadas antes do processo seletivo.
-
-**Tecnologias:** Python · Streamlit · scikit-learn · joblib · pandas
-
+## Entregável — Painel de Incentivo à Tecnologia
+ 
+O Capítulo 8 do TCC apresenta um painel Streamlit que classifica alunas em 3 grupos de intervenção com base nas probabilidades geradas pelo Modelo 3 (Random Forest Multiclasse). A ferramenta permite que escolas públicas identifiquem turmas com potencial para tecnologia e promovam ações direcionadas antes do processo seletivo.
+ 
+> **Modelo hospedado no Hugging Face:** [VanessaMCorrea/modelo_multiclasse_sem_turno](https://huggingface.co/VanessaMCorrea/modelo_multiclasse_sem_turno)  
+> Baixado automaticamente na primeira execução e salvo localmente como `modelo_multiclasse.pkl`.
+ 
+**Tecnologias:** Python 3.10+ · Streamlit · scikit-learn · joblib · pandas
+ 
 **Como executar:**
 ```bash
-pip install -r entregavel/app_modelo_preditivo/requirements.txt
-streamlit run entregavel/app_modelo_preditivo/app.py
+cd entregavel/app
+pip install -r requirements.txt
+streamlit run painel_grupos_tech.py
 ```
-
-**Funcionalidades:**
-- Upload de CSV com perfil das alunas (notas do ENEM, região, turno, modalidade de cota)
+ 
+Abre em `http://localhost:8501`
+ 
+### Grupos de intervenção
+ 
+| Grupo | Critério | Ação recomendada |
+|---|---|---|
+| 🚀 G3 Confirmadas em Tech | Área prevista = Tech | Mentoria de retenção |
+| ⚡ G2 Borda de Tech | Tech em 2º/3º com gap ≤ 15pp | Encontro em grupo, visita técnica |
+| 💡 G1 Potencial Técnico Oculto | NOTA_M ≥ P60 da turma, não prevista Tech | Atendimento individual |
+ 
+### Funcionalidades
+ 
+- Upload de CSV com perfil das alunas (notas do ENEM, região, modalidade de cota)
 - Predição da probabilidade de escolha por área para cada aluna
-- Visão agregada da turma com distribuição prevista por área
-- Alertas automáticos quando o percentual previsto para tecnologia está abaixo de limiar configurável
-
+- Cards individuais com ranking de probabilidades, perfil e ação recomendada
+- Filtro por área prevista e ajuste de parâmetros de classificação (sidebar)
+- Exportação do resultado com grupos anotados em CSV
+### Formato de entrada
+ 
+| Coluna | Tipo | Valores aceitos |
+|---|---|---|
+| `NOME_ALUNA` | texto | qualquer (opcional) |
+| `NOTA_M` | numérico | 0–1000 |
+| `NOTA_CN` | numérico | 0–1000 |
+| `NOTA_L` | numérico | 0–1000 |
+| `NOTA_CH` | numérico | 0–1000 |
+| `NOTA_R` | numérico | 0–1000 |
+| `NOTA_CANDIDATO` | numérico | média geral |
+| `IDADE` | inteiro | — |
+| `REGIAO` | texto | `N` · `NE` · `CO` · `SE` · `S` |
+| `COTA` | texto | `Ampla` · `Cota` |
+ 
+> A coluna `TURNO` é aceita mas ignorada — removida do modelo v2 após análise revelar importância espúria de 36% (correlação com oferta de cursos, não preferência da candidata).
+ 
+### Sobre o modelo
+ 
+- **Algoritmo:** Random Forest Multiclasse com `class_weight='balanced'`
+- **Treino:** SISU 2023 — 323.008 candidatas (mulheres, 1ª opção)
+- **Features (12):** NOTA_M, NOTA_CN, NOTA_L, NOTA_CH, NOTA_R, NOTA_CANDIDATO, IDADE, REGIAO (dummies), COTA (dummy)
+- **F1-macro:** 0,346 · **F1 Tech:** 0,106 (baixo por design — ver seção de resultados acima)
 ---
 
 ## Principais resultados
