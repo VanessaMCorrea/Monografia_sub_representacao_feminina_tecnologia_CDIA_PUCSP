@@ -29,6 +29,7 @@ A investigação partiu do mercado de trabalho (RAIS) e recuou até o ensino mé
     └── README.md   
 │
 ├── 🤖 entregavel/ ← Cap. 8: ferramenta 
+
 │   └── ├── painel_grupos_tech.py  ← Interface Streamlit
         ├── modelo_multiclasse_sem_turno.pkl ← Modelo 3 exportado do projeto e hospedado no HF
         ├── template_alunas.csv                       ← Template de entrada
@@ -38,6 +39,7 @@ A investigação partiu do mercado de trabalho (RAIS) e recuou até o ensino mé
 ├── 📊 figuras/                                       ← Gráficos gerados pelos notebooks
 │
 └── README.md
+
 ```
 
 ---
