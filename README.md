@@ -19,29 +19,29 @@ A investigação partiu do mercado de trabalho (RAIS) e recuou até o ensino mé
 ---
 
 ## Estrutura do repositório
-
 ```
-📦 tcc-mulheres-lideranca-tecnologia/
+Monografia_sub_representacao_feminina_tecnologia_CDIA_PUCSP/
 │
-├── 📓 notebooks/
-│   ├── TCC_Mulheres_Lideranca_TI_RAIS_CENSO.ipynb   ← IC: análise RAIS + Censo
-│   └── tcc_modelagem_genero_tecnologia_ENEM_SISU.ipynb  ← TCC: modelagem preditiva
-    └── README.md   
+├── README.md                                         ← este arquivo
 │
-├── 🤖 entregavel/ ← Cap. 8: ferramenta 
-
-│   └── ├── painel_grupos_tech.py  ← Interface Streamlit
-        ├── modelo_multiclasse_sem_turno.pkl ← Modelo 3 exportado do projeto e hospedado no HF
-        ├── template_alunas.csv                       ← Template de entrada
-    │   ├── requirements.txt
-    │   └── README.md 
+├── Notebooks/
+│   ├── tcc_modelagem_genero_tecnologia_ENEM_SISU.ipynb  ← modelagem preditiva (TCC)
+│   ├── TCC_Mulheres_Lideranca_TI_RAIS_CENSO.ipynb       ← análise RAIS + Censo (IC)
+│   └── README.md
 │
-├── 📊 figuras/                                       ← Gráficos gerados pelos notebooks
+├── Entregavel/
+│   ├── painel_grupos_tech.py                         ← interface Streamlit
+│   ├── modelo_multiclasse_sem_turno.pkl              ← modelo exportado (também no HF)
+│   ├── requirements_app.txt
+│   ├── README.md
+│   └── dados/
+│       ├── massa_10_alunas.csv                       ← massa de teste: 10 perfis curados
+│       ├── massa_30_alunas.csv                       ← massa de teste: 30 alunas
+│       ├── massa_edge_cases.csv                      ← casos extremos para validação
+│       └── README (1).md
 │
-└── README.md
-
+└── Figuras/                                          ← gráficos gerados pelos notebooks
 ```
-
 ---
 
 ## Bases de dados utilizadas
