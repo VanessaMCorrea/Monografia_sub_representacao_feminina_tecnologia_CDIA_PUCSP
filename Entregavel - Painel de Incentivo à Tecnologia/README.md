@@ -1,4 +1,4 @@
-# App — Painel de Incentivo à Tecnologia
+# Entregável - Painel de Incentivo à Tecnologia
 
 Aplicativo Streamlit que classifica alunas em 3 grupos de intervenção
 com base nas probabilidades geradas pelo modelo Random Forest.

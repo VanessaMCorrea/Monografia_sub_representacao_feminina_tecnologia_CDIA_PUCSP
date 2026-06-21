@@ -3,6 +3,7 @@
 **Autora:** Vanessa Marques Correa  
 **Orientador:** Prof. David de Oliveira Lemes   
 **Coorientadora:** Profa. Myrt Thania de Souza Cruz 
+
 **Instituição:** PUC-SP — Curso de Ciência de Dados e Inteligência Artificial  
 **Ano:** 2026  
 
