@@ -2,8 +2,7 @@
 
 **Autora:** Vanessa Marques Correa  
 **Orientador:** Prof. David de Oliveira Lemes   
-**Coorientadora:** Profa. Myrt Thania de Souza Cruz 
-
+**Coorientadora:** Profa. Myrt Thania de Souza Cruz  
 **Instituição:** PUC-SP — Curso de Ciência de Dados e Inteligência Artificial  
 **Ano:** 2026  
 
@@ -25,23 +24,23 @@ Monografia_sub_representacao_feminina_tecnologia_CDIA_PUCSP/
 │
 ├── README.md                                         ← este arquivo
 │
-├── Notebooks/
-│   ├── tcc_modelagem_genero_tecnologia_ENEM_SISU.ipynb  ← modelagem preditiva (TCC)
+├── Notebooks - Analises Exploratórias/
+│   ├── TCC_modelagem_genero_tecnologia_ENEM_SISU.ipynb  ← modelagem preditiva (TCC)
 │   ├── TCC_Mulheres_Lideranca_TI_RAIS_CENSO.ipynb       ← análise RAIS + Censo (IC)
 │   └── README.md
 │
-├── Entregavel/
+├── Entregavel - Painel de Incentivo à Tecnologia/
 │   ├── painel_grupos_tech.py                         ← interface Streamlit
 │   ├── modelo_multiclasse_sem_turno.pkl              ← modelo exportado (também no HF)
 │   ├── requirements_app.txt
 │   ├── README.md
-│   └── dados/
+│   └── Dados teste para input painel/
 │       ├── massa_10_alunas.csv                       ← massa de teste: 10 perfis curados
 │       ├── massa_30_alunas.csv                       ← massa de teste: 30 alunas
 │       ├── massa_edge_cases.csv                      ← casos extremos para validação
 │       └── README (1).md
 │
-└── Figuras/                                          ← gráficos gerados pelos notebooks
+└── Figuras impressas no trabalho escrito/                                          ← gráficos gerados pelos notebooks
 ```
 ---
 
