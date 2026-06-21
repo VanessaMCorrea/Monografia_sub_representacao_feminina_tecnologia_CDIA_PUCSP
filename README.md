@@ -1,8 +1,8 @@
 # Sub-representação feminina em tecnologia: modelagem preditiva da trajetória do ensino médio à liderança com recorte racial no Brasil
 
 **Autora:** Vanessa Marques Correa  
-**Orientadora:** Profa. Myrt Thania de Souza Cruz  
-**Coorientador:** Prof. David de Oliveira Lemes  
+**Orientador:** Prof. David de Oliveira Lemes   
+**Coorientadora:** Profa. Myrt Thania de Souza Cruz 
 **Instituição:** PUC-SP — Curso de Ciência de Dados e Inteligência Artificial  
 **Ano:** 2026  
 
