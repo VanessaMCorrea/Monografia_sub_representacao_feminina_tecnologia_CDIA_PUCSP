@@ -26,13 +26,14 @@ A investigação partiu do mercado de trabalho (RAIS) e recuou até o ensino mé
 ├── 📓 notebooks/
 │   ├── TCC_Mulheres_Lideranca_TI_RAIS_CENSO.ipynb   ← IC: análise RAIS + Censo
 │   └── tcc_modelagem_genero_tecnologia_ENEM_SISU.ipynb  ← TCC: modelagem preditiva
+    └── README.md   
 │
-├── 🤖 entregavel/
-│   └── app_modelo_preditivo/                         ← Cap. 8: ferramenta de apoio à decisão
-│       ├── app.py                                    ← Interface Streamlit
-│       ├── modelo_multiclasse.pkl                    ← Modelo 3 exportado (joblib)
-│       ├── template_alunas.csv                       ← Template de entrada
-│       └── requirements.txt
+├── 🤖 entregavel/ ← Cap. 8: ferramenta 
+│   └── ├── painel_grupos_tech.py  ← Interface Streamlit
+        ├── modelo_multiclasse_sem_turno.pkl ← Modelo 3 exportado do projeto e hospedado no HF
+        ├── template_alunas.csv                       ← Template de entrada
+    │   ├── requirements.txt
+    │   └── README.md 
 │
 ├── 📊 figuras/                                       ← Gráficos gerados pelos notebooks
 │
