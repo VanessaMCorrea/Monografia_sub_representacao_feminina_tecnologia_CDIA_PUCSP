@@ -46,7 +46,7 @@ A forma mais simples de reproduzir é abrir direto no Colab pelo README principa
 
 ### Opção 1 — Google Colab (recomendado)
 
-1. Acesse os badges **"Open in Colab"** no [README principal](../README.md)
+1. Acesse os badges **"Open in Colab"**
 2. O notebook abre diretamente no Colab
 3. Conecte ao Google Drive para acessar os dados (veja `../data/README.md`)
 4. Execute célula a célula (`Ctrl+Enter` ou `Runtime → Run all`)
