@@ -7,6 +7,29 @@ com toda a análise exploratória, modelagem e resultados da pesquisa.
 
 ## Notebooks
 
+### `preparar_sisu_2023.ipynb`  ← **rodar primeiro**
+ 
+Consolida os 4 arquivos brutos do SISU 2023 em uma base única pronta para modelagem.
+ 
+**O que este notebook faz:**
+- Lê os 4 arquivos do SISU 2023 (`chamada_regular_sisu_2023_1.csv`, `chamada_regular_sisu_2023_2.csv`, lista de espera 1 e 2)
+- Filtra apenas mulheres (`SEXO == 'F'`)
+- Deduplica candidatas que aparecem em múltiplas chamadas e opções de curso
+- Trata variáveis: notas (vírgula → ponto), idade, região geográfica, modalidade (Ampla/Cota), flag de mobilidade
+- **Gera:** `sisu_2023_mulheres.csv` — base de entrada para o notebook de modelagem
+**Arquivos necessários** (baixar em [dados.gov.br → SISU 2023](https://dados.gov.br)):
+```
+chamada_regular_sisu_2023_1.csv
+chamada_regular_sisu_2023_2.csv
+lista_espera_sisu_2023_1.csv
+lista_espera_sisu_2023_2.csv
+```
+ 
+> ⚠️ Rode este notebook **antes** do `tcc_modelagem_genero_tecnologia_ENEM_SISU.ipynb`.
+> O notebook de modelagem espera o arquivo `sisu_2023_mulheres.csv` já preparado.
+ 
+---
+
 ### `TCC_modelagem_genero_tecnologia_ENEM_SISU.ipynb`
 
 Análise com dados do ENEM 2018–2023 e SISU 2023.
