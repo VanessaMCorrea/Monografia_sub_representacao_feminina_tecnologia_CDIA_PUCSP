@@ -40,7 +40,7 @@ Monografia_sub_representacao_feminina_tecnologia_CDIA_PUCSP/
 │       ├── massa_edge_cases.csv                      ← casos extremos para validação
 │       └── README (1).md
 │
-└── Figuras impressas no trabalho escrito/                                          ← gráficos gerados pelos notebooks
+└── Figuras impressas no trabalho escrito/             ← gráficos gerados pelos notebooks
 ```
 ---
 
@@ -114,7 +114,7 @@ Modelagem preditiva supervisionada sobre microdados do ENEM (2018–2023) e SISU
 O Capítulo 8 do TCC apresenta um painel Streamlit que classifica alunas em 3 grupos de intervenção com base nas probabilidades geradas pelo Modelo 3 (Random Forest Multiclasse). A ferramenta permite que escolas públicas identifiquem turmas com potencial para tecnologia e promovam ações direcionadas antes do processo seletivo.
  
 > **Modelo hospedado no Hugging Face:** [VanessaMCorrea/modelo_multiclasse_sem_turno](https://huggingface.co/VanessaMCorrea/modelo_multiclasse_sem_turno)  
-> Baixado automaticamente na primeira execução e salvo localmente como `modelo_multiclasse.pkl`.
+> Baixado automaticamente na primeira execução e salvo localmente como `modelo_multiclasse_sem_turno.pkl`.
  
 **Tecnologias:** Python 3.10+ · Streamlit · scikit-learn · joblib · pandas
  
