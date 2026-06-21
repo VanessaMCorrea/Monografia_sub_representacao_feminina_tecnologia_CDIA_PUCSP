@@ -22,7 +22,7 @@ Análise com dados do ENEM 2018–2023 e SISU 2023.
 - Análise 6.1: nota de corte vs nota da candidata (folga de nota)
 - Análise 6.3: comparação de poder preditivo entre mulheres e homens
 
-**Dado gerado:** `modelo_multiclasse.pkl` — exportado para o Hugging Face.
+**Dado gerado:** `modelo_multiclasse.pkl` e `modelo_multiclasse_sem_turno.pkl` — exportado para o Hugging Face.
 
 ---
 
