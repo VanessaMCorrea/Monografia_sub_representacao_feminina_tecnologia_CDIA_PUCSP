@@ -120,8 +120,8 @@ O Capítulo 8 do TCC apresenta um painel Streamlit que classifica alunas em 3 gr
  
 **Como executar:**
 ```bash
-cd entregavel/app
-pip install -r requirements.txt
+cd "Entregavel - Painel de Incentivo à Tecnologia"
+pip install -r requirements_app.txt
 streamlit run painel_grupos_tech.py
 ```
  
