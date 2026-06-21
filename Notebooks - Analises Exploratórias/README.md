@@ -7,7 +7,7 @@ com toda a análise exploratória, modelagem e resultados da pesquisa.
 
 ## Notebooks
 
-### `tcc_modelagem_genero_tecnologia_ENEM_SISU.ipynb`
+### `TCC_modelagem_genero_tecnologia_ENEM_SISU.ipynb`
 
 Análise com dados do ENEM 2018–2023 e SISU 2023.
 
